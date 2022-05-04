@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+ 
+ <!-- Creating Bean object using Setter Injection -->
+ <!-- There are three ways you can create object using setter injection -->
+ <!-- First -->
+ <bean class="com.springcore.Student" name="student1">
+	 <property name="studentId">
+		 <value>1001</value>
+	 </property>
+	 <property name="studentName">
+	 	<value>flash</value>
+	 </property>
+	 <property name="studentAddress">
+	 	<value>central city</value>
+	 </property>
+ </bean>
+<!-- Second -->
+ <bean class="com.springcore.Student" name="student2">
+	 <property name="studentId" value="1002"/>
+	 <property name="studentName" value="wonder"/>
+	 <property name="studentAddress" value="amazon"/>
+ </bean>
+ <!-- Third -->
+ <bean class="com.springcore.Student" name="student3" p:studentId="1003" p:studentName="Batman" p:studentAddress="Gotham"/>
+
+ 
+ 
+ 
+ 
+ 
+ </beans>

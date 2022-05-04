@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xmlns:c="http://www.springframework.org/schema/c"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+ 
+ <bean class="com.contructorinjection.Language" name="lang">
+ 	<constructor-arg value="english"/>
+ </bean>
+ 
+ <bean class="com.contructorinjection.Person" name="person1">
+ 	<constructor-arg value="batman"/>
+ 	<constructor-arg value="25" type="int"/>
+ 	<constructor-arg ref="lang"/>
+ 	<constructor-arg>
+ 		<list>
+ 			<value>kannada</value>
+ 			<value>Hindi</value>
+ 			<value>Telugu</value>
+ 		</list>
+ 	</constructor-arg>
+ </bean>
+	
+ 
+ </beans>

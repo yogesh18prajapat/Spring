@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+ 
+ <!-- Enabling all annotations -->
+ <!--   <context:annotation-config/>   -->
+ 	
+ 
+<bean class="com.springcore.lifecycle.Food" name="f1" init-method="create" destroy-method="delete">
+	<property name="name" value="Jalebi"/>
+	<property name="price" value="15.50"/>
+</bean>
+
+<bean class="com.springcore.lifecycle.Drink" name="d1" >
+	<property name="name" value="lassi"/>
+	<property name="price" value="50"/>
+</bean>
+
+<bean class="com.springcore.lifecycle.AnnoExample" name="a1" >
+	<property name="name" value="Annotation"/>
+</bean>
+
+<bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>
+ 
+ </beans>

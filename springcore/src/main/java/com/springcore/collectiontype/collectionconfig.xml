@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+ 
+ <bean class="com.springcore.collectiontype.Employee" name="emp1">
+ 	<property name="name" value="Dr Strange"/>
+ 	<property name="phones">
+ 		<list>
+ 		 <value>1111001111</value>
+ 		 <value>1111002222</value>
+ 		 <value>1111003333</value>
+ 		</list>
+ 	</property>
+ 	<property name="addresses">
+ 	    <set>
+ 	      <value>london</value>
+ 	      <value>washington</value>
+ 	      <value>new york</value>
+ 	    </set>
+ 	</property>
+ 	<property name="courses">
+ 		<map>
+ 		  <entry key="java" value="3 months"/>
+ 		  <entry key="python" value="2 months"/>
+ 		  <entry key="C" value="1 month" />
+ 		</map>
+ 	</property>
+ 	<property name="props">
+ 		<props>
+ 			<prop key="name">flash</prop>
+ 			<prop key="age">21</prop>
+ 		</props>
+ 	</property>
+ </bean>
+ 
+ 
+ </beans>

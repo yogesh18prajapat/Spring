@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:util="http://www.springframework.org/schema/util"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd
+     http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+    
+    <!-- Standalone List -->
+    <util:list list-class="java.util.Vector" id="myLanguages">
+    	<value>Hindi</value>
+    	<value>Kannada</value>
+    	<value>English</value>
+    	<value>Telugu</value>
+    </util:list>
+    
+    <!-- Standalone Map -->
+    
+    <util:map map-class="java.util.TreeMap" id="mycourses">
+    	<entry key="java" value="10000"/>
+    	<entry key="C" value="8000"/>
+    	<entry key="python" value="9000"/>
+    </util:map>
+    
+    <bean class="com.springcore.standalone.collections.Person" name="person1">
+    	<property name="language">
+    		<ref bean="myLanguages"/>
+    	</property>
+    	<property name="coursfee" ref="mycourses"/>
+    </bean>
+
+ 
+ </beans>

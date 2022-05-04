@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+ 
+ <!-- First -->
+ 	<bean class="com.springcore.referencetype.Subject" name="sub1" p:subject="maths" p:experience="10 years"></bean>
+ 	<bean class="com.springcore.referencetype.Teacher" name="teach1" p:name="newton" p:Subject-ref="sub1"></bean>
+ 
+ 
+ <!-- Second -->
+ <bean class="com.springcore.referencetype.Subject" name="sub2">
+	 <property name="subject">
+		 <value>English</value>
+	 </property>
+	 <property name="experience">
+	 	<value>20 years</value>
+	 </property>
+ </bean>
+ <bean class="com.springcore.referencetype.Teacher" name="teach2">
+		<property name="name">
+		 	<value>shakesphere</value>
+	 	</property>
+	 	<property name="subject"> 	
+	 	<ref bean="sub2"/>	
+		</property>
+ </bean>
+ 
+ </beans>
